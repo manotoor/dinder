@@ -3286,6 +3286,10 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+mobx-firebase-store@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/mobx-firebase-store/-/mobx-firebase-store-1.2.1.tgz#e24a8a99a22e74b8fc9538bbf761b6fad74d923d"
+
 mobx-react@^4.3.3:
   version "4.4.3"
   resolved "http://registry.npmjs.org/mobx-react/-/mobx-react-4.4.3.tgz#baa9ec41165ee35ae7b9df19bca10190f36f117e"
@@ -3948,6 +3952,10 @@ react-native-easy-grid@0.2.0:
   resolved "https://registry.yarnpkg.com/react-native-easy-grid/-/react-native-easy-grid-0.2.0.tgz#4718031aa1baaa2613b829fc807da288eb0d2797"
   dependencies:
     lodash "^4.11.1"
+
+react-native-image-picker@^0.26.10:
+  version "0.26.10"
+  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-0.26.10.tgz#0bb9ab928984948c67aee0b9e64216bee007a9fc"
 
 react-native-iphone-x-helper@^1.0.1:
   version "1.1.0"
