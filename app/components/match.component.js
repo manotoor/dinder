@@ -5,9 +5,12 @@ import {
 	Spinner,
 	Card,
 	CardItem,
-	DeckSwiper
+	DeckSwiper,
+	Container,
+	View,
+	Text
 } from 'native-base';
-import { StyleSheet, View, Text, Image} from 'react-native';
+import { StyleSheet, Image} from 'react-native';
 import { observer } from 'mobx-react/native';
 import { observable } from 'mobx';
 import { createAutoSubscriber, autoSubscriber} from 'firebase-nest';
@@ -38,7 +41,6 @@ class Match extends Component {
 		if(postObj){
 			let pic = {uri: postObj.url}
 			let text = postObj.text;
-
 			return (
 				<Card>
 					<CardItem cardBody>
@@ -77,17 +79,22 @@ class Match extends Component {
 		}
 		const postList = matches.getData('matches')
 		const list = postList ? postList.entries() : null
+
 		return (
 			<View>
 				{fetching ? <Spinner/> : 
-					<DeckSwiper 
-						dataSource={list} 
-						renderItem={(card) => this.renderCard(card, matches)}
-						renderEmpty={this.renderNoMoreCards.bind(this)}
-						looping = {false}
-						onSwipeRight={(item) => this.markViewed(item)}
-						onSwipeLeft={(item)=> this.markViewed(item)}
-					/>
+					<Container>
+						<View>
+							<DeckSwiper
+								dataSource={list}
+								renderItem={(card) => this.renderCard(card, matches)}
+								renderEmpty={this.renderNoMoreCards.bind(this)}
+								looping={false}
+								onSwipeRight={(item) => this.markViewed(item)}
+								onSwipeLeft={(item) => this.markViewed(item)}
+		            		/>
+	            		</View>
+            		</Container>
 				}
 			</View>
 		)
